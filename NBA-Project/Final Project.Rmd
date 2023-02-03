@@ -1,6 +1,6 @@
 ---
 title: "Rookie Hall of Fame Prediction"
-author: "Thomas Buck, Charlie Hoholik, Abhimanyu Gupta, Samuel Chen"
+author: "Thomas Buck"
 date: "4/21/2022"
 output: html_document
 ---
