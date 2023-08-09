@@ -12,8 +12,8 @@ library(lubridate)
 library(scales)
 library(grid)
 library(gridExtra)
-source("../scripts/viridis.R")
-source("../scripts/ggprob.R")
+source("viridis.R")
+source("ggprob.R")
 
 ```
 
