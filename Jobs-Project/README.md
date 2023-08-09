@@ -1,5 +1,5 @@
 # Business Analyst Position Analysis
-
+### By Thomas Buck
 ## Introduction
 
 One day, I hope to enter a career as a business analyst, but it would probably be good to know some information about the field instead of heading in blind. Due to this career being a future interest of mine, I was curious about what factors made on business analyst job better over another. I decided to explore a large data set containing information about business analyst job listings within the United States in 2019 and 2029. Through this analysis, I want to address the following questions: does the founding date of the firm have any relationship with the expected salary of the position? Is there significant evidence that Business Analyst Positions in New York pay a better average salary than any other job in New York? Which job title and sector appear to be the “best” ones to get a job in ("Best" in this case referring to a combination of expected salary and overall rating)?   
