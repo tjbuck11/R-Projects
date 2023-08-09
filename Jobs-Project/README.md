@@ -97,26 +97,26 @@ Additionally, by grouping the job postings by sector and finding the mean salary
 
 This graphic displays the overall trend of ratings of job postings within a given sector as the average salary within the sector increases. It utilizes a linear model to decrease noise and clarify the pattern between average salary and job rating. The slopes of these linear regression lines are difficult to see visually, but looking at the corresponding equation for each regression line helps display the trend. For our regression analysis, let $x_i$ be a given salary, and the resulting $\hat{y}_i$ is the predicted rating for the given salary.
 
-Accounting:
-$$
+##### Accounting:
+```math
 \hat{y}_i = 3.931 -0.0000006102 x_i
-$$
-Aerospace and Defense:
-$$
+```
+##### Aerospace and Defense:
+```math
 \hat{y}_i = 3.723 -0.0000009955 x_i
-$$
-Business Services:
-$$
+```
+##### Business Services:
+```math
 \hat{y}_i = 3.776 + 0.0000006622 x_i
-$$
-Information Technology:
-$$
+```
+##### Information Technology:
+```math
 \hat{y}_i = 3.849 + 0.0000006064 x_i
-$$
-Media:
-$$
+```
+##### Media:
+```math
 \hat{y}_i = 3.680 -0.0000008317 x_i
-$$
+```
 I hope to have a career (20+ years) in this field and a declining rating as average salary increases is not a good sign. As I progress within the sector, I don't want the quality of my positions to decrease. Based on this, we want a strictly positive relationship between average salary and rating, which the regression equations for each sector help us find. Based on the regression models, there are 2 sectors that display an increasing trend between average salary and job rating: Business Services and Information Technology. We will further analyze these 2 sectors to determine which one is superior.
 
 Now that we have visualized the trends in job rating and filtered down the sectors to analyze, we can now look at the distribution of average salaries in both sectors.
@@ -134,19 +134,19 @@ Since we filtered out sectors that had less than 30 observations, by the Central
 # SHOW T-TEST OUTPUT
 
 Let's start with the Information Technology sector. We find the Information Technology sector has 1056 observations with a mean average salary of 80,424.24 dollars and a standard deviation of 27,179.44 dollars. We find the mean rating to be 3.9 with a standard deviation of 0.98. Running a t-test using R, we find the 95% confidence interval for the average salary and rating to be 
-$$
+```math
 Salary \ CI = [78783.07,82065.42]\\
 Rating \ CI = [3.84, 3.96]
-$$
+```
 Under repeated sampling, we are 95% confident the true mean salary of job postings in the Information Technology sector to be between 78,783.07 and 82,065.42 dollars and the true mean rating to be between 3.84 and 3.96.
 
 # SHOW T-TEST OUTPUT
 
 For the Business Services sector, there are 792 observations with a mean average salary of 78,893.31 dollars and a standard deviation of 26,329.50 dollars. We find the mean rating to be 3.83 with a standard deviation of 0.645. Running a t-test using R, we find the 95% confidence interval for average salary and rating to be 
-$$
+```math
 Salary \ CI = [77056.80, 80729.82]\\
 Rating \ CI  = [3.78, 3.87]
-$$
+```
 Under repeated sampling, we are 95% confident the true mean salary of job postings in the Business Services sector to be between 77,056.80 and 80,729.82 dollars and the true mean rating to be between 3.78 and 3.87. 
 
 ### Discussion
