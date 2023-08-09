@@ -16,7 +16,7 @@ The key variables I will be utilizing will mainly be the year in which the compa
 
 All of this data is from the Glass Door website using various web scraping techniques by an independent user. The independent user created the data set to make job searching easier for individuals who may have lost their jobs during the COVID-19 pandemic.
 
-# INSERT GRAPH
+![graph1](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_1_job.png)
 
 ### Analysis
 
@@ -44,7 +44,7 @@ T = \frac{-1.0185  - 0}{0.5555} = -1.8335
 ```
 Which can graphically be represented as:
 
-# INSERT GRAPH
+![graph2](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_2_job.png)
 
 This leads to a p-value of 0.0668, which is greater than 0.05, therefore there is no evidence to reject the null hypothesis.
 
@@ -76,12 +76,9 @@ Using this formula to find the t-statistic:
 ```math
 T = \frac{\bar{X} - \mu}{s / \sqrt{n}}
 ```
-
-# T-TEST OUTPUT
-
 We get $t = 0.5831$. Graphically, this can be represented as:
 
-# INSERT T-TEST GRAPH
+![graph3](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_3_job.png)
 
 Running a t-test with 230 degrees of freedom we find a p-value of 0.2801. Since our p-val = 0.2801 is greater than 0.05, we fail to reject the null hypothesis. We have no evidence the mean salary of business analyst positions in New York City is greater than the average salary in New York City.
 
@@ -92,8 +89,7 @@ When defining "best" in this case, I'm referring to a combination of expected sa
 
 Additionally, by grouping the job postings by sector and finding the mean salary and rating for that sector, the data can be further filtered. As stated before, we are characterizing "best" as a combination of average salary and rating. Thus, many sectors have both lower mean salaries and ratings than other sectors, so those have been filtered out. Additionally, the rating is a particularly important component since we want to enjoy our job and have a healthy work environment. Some sectors had similar mean salaries but some had lower ratings such as the Finance, Retail, and Biotech sectors, so those have been filtered out. Therefore, we have narrowed it down to 5 sectors: Aerospace and Defense, Accounting and Legal, Business Services, Information Technology, and Media.
 
-# INSERT TABLE
-# INSERT INDUSTRY GRAPH
+![graph4](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_4_job.png)
 
 This graphic displays the overall trend of ratings of job postings within a given sector as the average salary within the sector increases. It utilizes a linear model to decrease noise and clarify the pattern between average salary and job rating. The slopes of these linear regression lines are difficult to see visually, but looking at the corresponding equation for each regression line helps display the trend. For our regression analysis, let $x_i$ be a given salary, and the resulting $\hat{y}_i$ is the predicted rating for the given salary.
 
@@ -109,7 +105,7 @@ I hope to have a career (20+ years) in this field and a declining rating as aver
 
 Now that we have visualized the trends in job rating and filtered down the sectors to analyze, we can now look at the distribution of average salaries in both sectors.
 
-# INSERT GRAPH
+![graph5](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_5_job.png)
 
 The graphic on the left shows the density of salaries in each sector. It appears the Information Technology sector has a larger density of observations in the right tail, which means there are more job postings for Information Technology positions on GlassDoor with larger salaries when compared to Business Services positions. However, both of the distributions are very similar. 
 
@@ -119,8 +115,6 @@ Based on the previous graphic, we can see that the Information Technology and Bu
 
 Since we filtered out sectors that had less than 30 observations, by the Central Limit Theorem, we can assume the ratings and average salary variables in each sector are approximately normally distributed. Additionally, prior data shows that the distribution of salaries is not extremely non-normal. Since we do not know the population standard deviation for any sector, we will assume each sector's average salary and rating follows a Student-T distribution with n-1 degrees of freedom.
 
-# SHOW T-TEST OUTPUT
-
 Let's start with the Information Technology sector. We find the Information Technology sector has 1056 observations with a mean average salary of \$80,424.24 and a standard deviation of \$27,179.44 dollars. We find the mean rating to be 3.9 with a standard deviation of 0.98. Running a t-test using R, we find the 95% confidence interval for the average salary and rating to be 
 ```math
 Salary \ CI = [\$78783.07, \$82065.42]
@@ -129,8 +123,6 @@ Salary \ CI = [\$78783.07, \$82065.42]
 Rating \ CI = [3.84, 3.96]
 ```
 Under repeated sampling, we are 95% confident the true mean salary of job postings in the Information Technology sector to be between \$78,783.07 and \$82,065.42 and the true mean rating to be between 3.84 and 3.96.
-
-# SHOW T-TEST OUTPUT
 
 For the Business Services sector, there are 792 observations with a mean average salary of \$78,893.31 and a standard deviation of \$26,329.50. We find the mean rating to be 3.83 with a standard deviation of 0.645. Running a t-test using R, we find the 95% confidence interval for average salary and rating to be 
 ```math
