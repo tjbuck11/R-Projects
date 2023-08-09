@@ -8,7 +8,7 @@ One day, I hope to enter a career as a business analyst, but it would probably b
 
 ## Background
 
-The data set I have decided to use for this honors project can be found on kaggle^[https://www.kaggle.com/datasets/andrewmvd/business-analyst-jobs]. This data set focuses on Business Analyst job listings and various information about these listings. The data set contains approximately 4092 distinct job listings of 15 different variables (although 2 of these are just indexes which I have removed).
+The data set I have decided to use for this honors project can be found on [kaggle](https://www.kaggle.com/datasets/andrewmvd/business-analyst-jobs). This data set focuses on Business Analyst job listings and various information about these listings. The data set contains approximately 4092 distinct job listings of 15 different variables (although 2 of these are just indexes which I have removed).
 
 Some of the information listed about each job title include salary estimates, the job’s respective location, industry, sector, and the job description which users could use to search for specific skills needed or desired. The Business Analyst data also contains information about the company that listed the job such as their name, competitors, revenue, headquarters, and size. Finally, there are columns dedicated to the overall rating of the position (on Glass Door) and whether “easy apply” was available.
 
@@ -51,7 +51,7 @@ This leads to a p-value of 0.0668, which is greater than 0.05, therefore there i
 
 #### Question 2: Is there significant evidence that Business Analyst Positions in New York pay a better average salary than any other job in New York?
 
-Coming out of college, I plan on living in New York for a period of time, and will hopefully work as a business analyst. Is this a good decision? We will first filter the job listings to only ones based in New York City, New York, and then use the mean of all the expected salaries. Luckily, there is ample information online about salary statistics, so I will also be utilizing outside calculations and statistics from the U.S Census Bureau^[https://data.census.gov/cedsci/table?q=new%20york%20city%20wage&tid=ACSST5Y2020.S2001]
+Coming out of college, I plan on living in New York for a period of time, and will hopefully work as a business analyst. Is this a good decision? We will first filter the job listings to only ones based in New York City, New York, and then use the mean of all the expected salaries. Luckily, there is ample information online about salary statistics, so I will also be utilizing outside calculations and statistics from the [U.S Census Bureau](https://data.census.gov/cedsci/table?q=new%20york%20city%20wage&tid=ACSST5Y2020.S2001)
 
 Let us define $\mu$ as the true mean salary of a worker in New York City, New York in 2020. (the link above has $\mu$ = $84,950). It should be noted this value incorporates business analyst positions in New York City, but this shouldn't have a major impact on our analysis.
 
