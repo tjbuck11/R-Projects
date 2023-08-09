@@ -121,25 +121,25 @@ Since we filtered out sectors that had less than 30 observations, by the Central
 
 # SHOW T-TEST OUTPUT
 
-Let's start with the Information Technology sector. We find the Information Technology sector has 1056 observations with a mean average salary of 80,424.24 dollars and a standard deviation of 27,179.44 dollars. We find the mean rating to be 3.9 with a standard deviation of 0.98. Running a t-test using R, we find the 95% confidence interval for the average salary and rating to be 
+Let's start with the Information Technology sector. We find the Information Technology sector has 1056 observations with a mean average salary of \$80,424.24 and a standard deviation of \$27,179.44 dollars. We find the mean rating to be 3.9 with a standard deviation of 0.98. Running a t-test using R, we find the 95% confidence interval for the average salary and rating to be 
 ```math
-Salary \ CI = [78783.07,82065.42]
+Salary \ CI = [\$78783.07, \$82065.42]
 ```
 ```math
 Rating \ CI = [3.84, 3.96]
 ```
-Under repeated sampling, we are 95% confident the true mean salary of job postings in the Information Technology sector to be between 78,783.07 and 82,065.42 dollars and the true mean rating to be between 3.84 and 3.96.
+Under repeated sampling, we are 95% confident the true mean salary of job postings in the Information Technology sector to be between \$78,783.07 and \$82,065.42 and the true mean rating to be between 3.84 and 3.96.
 
 # SHOW T-TEST OUTPUT
 
-For the Business Services sector, there are 792 observations with a mean average salary of 78,893.31 dollars and a standard deviation of 26,329.50 dollars. We find the mean rating to be 3.83 with a standard deviation of 0.645. Running a t-test using R, we find the 95% confidence interval for average salary and rating to be 
+For the Business Services sector, there are 792 observations with a mean average salary of \$78,893.31 and a standard deviation of \$26,329.50. We find the mean rating to be 3.83 with a standard deviation of 0.645. Running a t-test using R, we find the 95% confidence interval for average salary and rating to be 
 ```math
-Salary \ CI = [77056.80, 80729.82]
+Salary \ CI = [\$77056.80, \$80729.82]
 ```
 ```math
 Rating \ CI  = [3.78, 3.87]
 ```
-Under repeated sampling, we are 95% confident the true mean salary of job postings in the Business Services sector to be between 77,056.80 and 80,729.82 dollars and the true mean rating to be between 3.78 and 3.87. 
+Under repeated sampling, we are 95% confident the true mean salary of job postings in the Business Services sector to be between \$77,056.80 and \$80,729.82 and the true mean rating to be between 3.78 and 3.87. 
 
 ### Discussion
 
