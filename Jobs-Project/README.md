@@ -97,6 +97,14 @@ Additionally, by grouping the job postings by sector and finding the mean salary
 
 This graphic displays the overall trend of ratings of job postings within a given sector as the average salary within the sector increases. It utilizes a linear model to decrease noise and clarify the pattern between average salary and job rating. The slopes of these linear regression lines are difficult to see visually, but looking at the corresponding equation for each regression line helps display the trend. For our regression analysis, let $x_i$ be a given salary, and the resulting $\hat{y}_i$ is the predicted rating for the given salary.
 
+| Industry  | Linear Regression Formula |
+| ------------- | ------------- |
+| Accounting  |  $\hat{y}_i = 3.931 -0.0000006102 x_i$ |
+| Aerospace and Defense  |  $\hat{y}_i = 3.723 -0.0000009955 x_i$ |
+| Business Services  | $\hat{y}_i = 3.776 + 0.0000006622 x_i$  |
+| Information Technology  |  $\hat{y}_i = 3.849 + 0.0000006064 x_i$ |
+| Media  |  $\hat{y}_i = 3.680 -0.0000008317 x_i$ |
+
 ##### Accounting:
 ```math
 \hat{y}_i = 3.931 -0.0000006102 x_i
