@@ -27,21 +27,21 @@ These graphics show the relationship between the year the company was founded an
 To test whether the relationships between year founded and average salary is significant, we will conduct a hypothesis test relating to the true slope of the regression line and determine if our findings are significant. We will carry out a hypothesis test to determine if the slope of the least squares regression line is statistically significant. Our data set has 3,419 observations of average salaries of business analyst positions. Since n = 3,419 is greater than 30, we would be able to conclude the data has an approximately normal distribution. However, the standard deviation of the population is unknown, so we can use a Student T Distribution with 3,418 degrees of freedom. The t-test is robust meaning the only time we cannot use it is if we have an extremely non-normal distribution, and previous data on salaries appear not to be extremely non-normal. Since there are two estimated parameters in our linear model (slope and intercept), our test statistic $T$ is t-distributed with 3,417 degrees of freedom. 
 
 
-$$
+```math
 T \sim t(df=3417)
-$$
+```
 Therefore, we have the following hypotheses:
 
-$$
+```math
 H_0: \hat{\beta}_1 = 0 \\
 H_a: \hat{\beta}_1 \neq 0
-$$
+```
 The estimated slope is $\hat{\beta}_1 = -1.0185$ with an estimated standard error of $SE(\hat{\beta}_1)=0.5555$.
 
 This leads to a t-statistic of 
-$$
+```math
 T = \frac{-1.0185  - 0}{0.5555} = -1.8335
-$$
+```
 Which can graphically be represented as:
 
 # INSERT GRAPH
