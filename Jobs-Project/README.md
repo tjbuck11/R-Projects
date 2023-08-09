@@ -73,13 +73,13 @@ $$
 
 We calculate our $\bar{X}$ to be 85,722.94 with a $s$ = 20132.96.
 Using this formula to find the t-statistic:
-$$
+```math
 T = \frac{\bar{X} - \mu}{s / \sqrt{n}}
-$$
+```
 
 # T-TEST OUTPUT
 
-We get t = 0.5831. Graphically, this can be represented as:
+We get $t = 0.5831$. Graphically, this can be represented as:
 
 # INSERT T-TEST GRAPH
 
