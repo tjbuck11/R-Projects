@@ -1,6 +1,6 @@
-## Business Analyst Position Analysis
+# Business Analyst Position Analysis
 
-### Introduction
+## Introduction
 
 One day, I hope to enter a career as a business analyst, but it would probably be good to know some information about the field instead of heading in blind. Due to this career being a future interest of mine, I was curious about what factors made on business analyst job better over another. I decided to explore a large data set containing information about business analyst job listings within the United States in 2019 and 2029. Through this analysis, I want to address the following questions: does the founding date of the firm have any relationship with the expected salary of the position? Is there significant evidence that Business Analyst Positions in New York pay a better average salary than any other job in New York? Which job title and sector appear to be the “best” ones to get a job in ("Best" in this case referring to a combination of expected salary and overall rating)?   
 
@@ -18,9 +18,10 @@ All of this data is from the Glass Door website using various web scraping techn
 
 ![graph1](https://github.com/tjbuck11/R-Projects/blob/main/Jobs-Project/Visuals/graph_1_job.png)
 
-### Analysis
+## Analysis
 
-To start, we will first look into the question: does the founding date of the firm or company have any relationship with the expected salary? To do so, we will investigate the founding year of the company and the expected salary of the listing.
+### Question 1: Does the founding date of the firm or company have any relationship with the expected salary?
+We will investigate relationship between the founding year of the company and the expected salary of the listing.
 
 These graphics show the relationship between the year the company was founded and the expected salary for that specific company. The graphics also displays the general density of when companies were founded, and it appears most companies hiring business analysts were founded recently, around 1980 or later. Initially, there appears to be a slight, positive relationship between expected salary and the year founded in the top plot. However, by zooming in on our regression line in the graphic on the bottom, we see a slight negative trend. 
 
@@ -49,7 +50,7 @@ Which can graphically be represented as:
 This leads to a p-value of 0.0668, which is greater than 0.05, therefore there is no evidence to reject the null hypothesis.
 
 
-#### Question 2: Is there significant evidence that Business Analyst Positions in New York pay a better average salary than any other job in New York?
+### Question 2: Is there significant evidence that Business Analyst Positions in New York pay a better average salary than any other job in New York?
 
 Coming out of college, I plan on living in New York for a period of time, and will hopefully work as a business analyst. Is this a good decision? We will first filter the job listings to only ones based in New York City, New York, and then use the mean of all the expected salaries. Luckily, there is ample information online about salary statistics, so I will also be utilizing outside calculations and statistics from the [U.S Census Bureau](https://data.census.gov/cedsci/table?q=new%20york%20city%20wage&tid=ACSST5Y2020.S2001)
 
@@ -83,7 +84,7 @@ We get $t = 0.5831$. Graphically, this can be represented as:
 Running a t-test with 230 degrees of freedom we find a p-value of 0.2801. Since our p-val = 0.2801 is greater than 0.05, we fail to reject the null hypothesis. We have no evidence the mean salary of business analyst positions in New York City is greater than the average salary in New York City.
 
 
-#### Question 3: Which sector appears to be the “best” one to get a job in?
+### Question 3: Which sector appears to be the “best” one to get a job in?
 
 When defining "best" in this case, I'm referring to a combination of expected salary and overall rating. When looking at the different sectors within the data, many only have minimal observations which could mess up our analysis due to an insufficient amount of data. Therefore, sectors with less than 50 observations (since by keeping n > 30 we can assume the distribution for each sector is approximately normal and a higher number of observations produces more accurate data). 
 
@@ -133,7 +134,7 @@ Rating \ CI  = [3.78, 3.87]
 ```
 Under repeated sampling, we are 95% confident the true mean salary of job postings in the Business Services sector to be between \$77,056.80 and \$80,729.82 and the true mean rating to be between 3.78 and 3.87. 
 
-### Discussion
+## Discussion
 
 We analyzed and conducted a hypothesis test on the slope of our linear regression model to determine if there was a significant relationship between the year a company was founded and the average salary. Based on the analysis of our linear regression model, we cannot conclude there is a statistically significant relationship between the founding year of a company and the average salary. We found the probability of finding a t-statistic as extreme or more extreme than the one we calculated to be 0.0668, which is less than our 0.05 significance level. This is a very interesting finding and it possibly displays the idea that newer companies base their salaries on older companies, but more analysis would be required to accurately assume this conclusion.
 
