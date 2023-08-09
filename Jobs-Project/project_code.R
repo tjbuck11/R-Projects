@@ -5,8 +5,8 @@ library(lubridate)
 library(scales)
 library(grid)
 library(gridExtra)
-source("viridis.R")
-source("ggprob.R")
+source("import_scripts/viridis.R")
+source("import_scripts/ggprob.R")
 
 # Initial Data Cleaning
 ba_df = read_csv("BusinessAnalyst.csv") %>% 
