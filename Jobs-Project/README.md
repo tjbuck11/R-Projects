@@ -105,26 +105,6 @@ This graphic displays the overall trend of ratings of job postings within a give
 | Information Technology  |  $\hat{y}_i = 3.849 + 0.0000006064 x_i$ |
 | Media  |  $\hat{y}_i = 3.680 -0.0000008317 x_i$ |
 
-##### Accounting:
-```math
-\hat{y}_i = 3.931 -0.0000006102 x_i
-```
-##### Aerospace and Defense:
-```math
-\hat{y}_i = 3.723 -0.0000009955 x_i
-```
-##### Business Services:
-```math
-\hat{y}_i = 3.776 + 0.0000006622 x_i
-```
-##### Information Technology:
-```math
-\hat{y}_i = 3.849 + 0.0000006064 x_i
-```
-##### Media:
-```math
-\hat{y}_i = 3.680 -0.0000008317 x_i
-```
 I hope to have a career (20+ years) in this field and a declining rating as average salary increases is not a good sign. As I progress within the sector, I don't want the quality of my positions to decrease. Based on this, we want a strictly positive relationship between average salary and rating, which the regression equations for each sector help us find. Based on the regression models, there are 2 sectors that display an increasing trend between average salary and job rating: Business Services and Information Technology. We will further analyze these 2 sectors to determine which one is superior.
 
 Now that we have visualized the trends in job rating and filtered down the sectors to analyze, we can now look at the distribution of average salaries in both sectors.
