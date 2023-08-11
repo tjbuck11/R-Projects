@@ -64,7 +64,7 @@ $$
 Therefore, we will construct a left-tail hypothesis test with the following hypotheses:
 
 $$
-H_0: \beta_1 = 0 \\
+H_0: \beta_1 = 0 \
 H_a: \beta_1 < 0
 $$
 
@@ -75,11 +75,11 @@ Where $\beta_1$ represents the expected change in points per game as the year in
 The estimated slope is $\hat{\beta}_1 = -0.1077$ with an estimated standard error of $SE(\hat{\beta}_1)=0.1521$.
 
 This leads to a t-statistic of 
-$$
+```math
 t = \frac{-0.1077  - 0}{0.1521} = -0.708
-$$
+```
 
-This t-statistic has a corresponding p-value of 0.2415, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
+This t-statistic has a corresponding p-value of **0.2415**, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
 
 We can follow the same sampling distribution and hypotheses to test the relationship between the year a player was drafted and the efficiency rating. In this case, $\beta_1$ represents the expected change in efficiency rating as the year increases.
 
@@ -87,11 +87,11 @@ We can follow the same sampling distribution and hypotheses to test the relation
 The estimated slope is $\hat{\beta}_1 = -0.04876$ with an estimated standard error of $SE(\hat{\beta}_1)=0.16908$.
 
 This leads to a t-statistic of 
-$$
+```math
 t = \frac{-0.04876  - 0}{0.16908} = -0.288
-$$
+```
 
-This t-statistic has a corresponding p-value of 0.3874, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
+This t-statistic has a corresponding p-value of **0.3874**, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
 We can now move forward with the analysis under the assumption that both points per game and efficiency rating have remained constant over time for Hall of Fame players.
 
 ## Hypothesis Testing: Hall of Fame vs Non-Hall of Fame Players
@@ -100,7 +100,7 @@ We will now conduct hypotheses tests to determine if the true mean points per ga
 
 We have two independent samples and we will treat the data as randomly sampled from larger populations.
 
-Let $X_p$ be the true mean points per game for a Hall of Fame rookie with distribution $t(df = 41)$\
+Let $X_p$ be the true mean points per game for a Hall of Fame rookie with distribution $t(df = 41)$
 
 Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
 
