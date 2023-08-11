@@ -9,7 +9,7 @@ source("import_scripts/viridis.R")
 source("import_scripts/ggprob.R")
 
 # Initial Data Cleaning
-ba_df = read_csv("BusinessAnalyst.csv") %>% 
+ba_df = read_csv("Data/BusinessAnalyst.csv") %>% 
   rename(title = "Job Title",
          avg_salary = "Salary Estimate",
          description = "Job Description",
