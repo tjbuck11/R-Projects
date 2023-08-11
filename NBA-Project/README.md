@@ -22,20 +22,167 @@ We will use points and efficiency because they are primary statistics associated
 ### Variables
 | Variable  | Description |
 | ------------- | ------------- |
-| Points  | Player’s average number of points per game  |
-| Efficiency  | Holistic measure of the player’s success. Calculated as (Points + Rebounds + Assists + Steals + Blocks − Missed Field Goals − Missed Free Throws - Turnovers) / Games Played |
-| Height  |  Height of the player in centimeters  |
-| Weight  |  Weight of a player in kilograms  |
-| Hall of Fame | Year the player was inducted to the Hall of Fame, NA if the player did not make the Hall of Fame |
-
-- Points: Player’s average number of points per game\
-- Efficiency: Holistic measure of the player’s success\ 
-(Points + Rebounds + Assists + Steals + Blocks − Missed Field Goals − Missed Free Throws - Turnovers) / Games Played\
-- Height: Height of the player in centimeters\
-- Weight: Weight of a player in kilograms\
-- Hall of Fame: Year the player was inducted to the Hall of Fame, NA if the player did not make the Hall of Fame\
+| **Points**  | Player’s average number of points per game  |
+| **Efficiency**  | Holistic measure of the player’s success. Calculated as (Points + Rebounds + Assists + Steals + Blocks − Missed Field Goals − Missed Free Throws - Turnovers) / Games Played |
+| **Height**  |  Height of the player in centimeters  |
+| **Weight**  |  Weight of a player in kilograms  |
+| **Hall of Fame** | Year the player was inducted to the Hall of Fame, NA if the player did not make the Hall of Fame |
 
 ## Analysis
 
 As stated before, we believe making the Hall of Fame is a very prestigious award that only a small fraction of NBA players achieve. We find that our data also represents this since only 2.83% of the rookies in our data set were eventually inducted into the Hall of Fame and 97.17% were never inducted. 
 Let's look at how these Hall of Fame players compare to non-Hall of Fame players in various aspects.
+
+# Insert Box Plot
+
+The box plot on the left is a player's points per game in their rookie year grouped by Hall of Fame status and the box plot on the right is a player's efficiency rating grouped by Hall of Fame status. From these plots, we can see there are differences between Hall of Fame and non-Hall of Fame players, but are these differences significant? 
+
+To answer this question, we want to first look at trends in the data that could impact our analysis. Specifically, we will examine how points per game and efficiency rating change over time for Hall of Fame players. If we find that there is a significant change in points per game and efficiency, we should take this into account for our further analysis.
+
+# Insert Line Plot
+
+Both of our linear regression models display a negative slope, implying a decrease in points per game and efficiency rating over time. Let's look at the games played variable to see if it can offer a possible explanation.
+
+## Checking Trends in the Data
+
+# Insert Graph of Year vs games played
+
+There appears to be a weak negative relationship between the year a player was drafted and their number of games played. It is possible this slight decrease in games played could partially explain the slight negative trends in points per game and efficiency rating over time, but much more analysis would need to be conducted to conclude this.
+
+Before we conduct a hypothesis test on our linear regression models, we first want to ensure using a linear model is appropriate. We can do so by looking at the residuals associated with our linear models, which takes a given data point from our data and measures how far that value is from our predicted value.
+
+# Insert Residual Plot
+
+The first row of graphics display scatter plots of the residuals for the points per game and efficiency rating variables, respectively, for Hall of Famer's. There is also a horizontal line at 0 to help visualize where each residual falls. There is no pattern between the residuals, which means our use of a linear model is appropriate. The second row displays the distribution of the residuals for points per game and efficiency rating respectively. The distribution of the residuals is the black line and the normal distribution with a similar mean and standard deviation is the blue line. They appear to follow the normal distribution pretty close, so we can assume the distribution of the residuals is approximately normal, which we will utilize to conduct a hypothesis test on the slopes of our linear models.
+
+Now we conduct a hypothesis test to determine if the relationship between the year a player was drafted and points per game and efficiency is significant. We know the Hall of Fame players sampling distribution of average points per game and average efficiency per game follows a t-distribution since we do not know the standard deviation of the entire population and our residuals follow an approximately normal distribution for these variables. However, because we are estimating for the slope and the intercept of our regression model, we are using up 2 degrees of freedom, so we now have v = n-2 degrees of freedom. Therefore, both our points per game and efficiency rating variables for Hall of Fame rookies have the following distribution:
+
+$$
+t(df=40)
+$$
+
+Therefore, we will construct a left-tail hypothesis test with the following hypotheses:
+
+$$
+H_0: \beta_1 = 0 \\
+H_a: \beta_1 < 0
+$$
+
+Where $\beta_1$ represents the expected change in points per game as the year increases.
+
+# Insert Summary table for the linear model (points)
+
+The estimated slope is $\hat{\beta}_1 = -0.1077$ with an estimated standard error of $SE(\hat{\beta}_1)=0.1521$.
+
+This leads to a t-statistic of 
+$$
+t = \frac{-0.1077  - 0}{0.1521} = -0.708
+$$
+
+This t-statistic has a corresponding p-value of 0.2415, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
+
+We can follow the same sampling distribution and hypotheses to test the relationship between the year a player was drafted and the efficiency rating. In this case, $\beta_1$ represents the expected change in efficiency rating as the year increases.
+
+# Insert Summary table of the linear model (efficiency)
+The estimated slope is $\hat{\beta}_1 = -0.04876$ with an estimated standard error of $SE(\hat{\beta}_1)=0.16908$.
+
+This leads to a t-statistic of 
+$$
+t = \frac{-0.04876  - 0}{0.16908} = -0.288
+$$
+
+This t-statistic has a corresponding p-value of 0.3874, which is greater than 0.05. Therefore, we fail to reject the null hypothesis.
+We can now move forward with the analysis under the assumption that both points per game and efficiency rating have remained constant over time for Hall of Fame players.
+
+## Hypothesis Testing: Hall of Fame vs Non-Hall of Fame Players
+
+We will now conduct hypotheses tests to determine if the true mean points per game for a Hall of Fame rookie is greater than the true mean points per game for a non-Hall of Fame rookie.
+
+We have two independent samples and we will treat the data as randomly sampled from larger populations.
+
+Let $X_p$ be the true mean points per game for a Hall of Fame rookie with distribution $t(df = 41)$\
+
+Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
+
+Under these distributions, we have the following hypotheses:
+$$
+H_0: X_p-Y_p = 0 \
+H_a: X_p-Y_p > 0
+$$
+
+# Insert t-test output
+
+We calculate a t-statistic of 8.39. This value has a corresponding $p-val = 7.816*10^{-11}$ which is essentially 0.
+
+Now we will conduct a similar test for the efficiency rating of a Hall of Fame rookie versus a non-Hall of Fame rookie. 
+
+Let $X_e$ be the true mean efficiency rating for a Hall of Fame rookie with distribution $t(df = 41)$\
+
+Let $Y_e$ be the true mean efficiency rating for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
+
+Under these distributions, we have the following hypotheses:
+$$
+H_0: X_e-Y_e = 0 \
+H_a: X_e-Y_e > 0
+$$
+
+# Insert t-test output
+
+We calculate a t-statistic of 8.890, which has a corresponding $p-val = 1.673 *10^{-11}$ which is essentially 0.
+
+## Confidence Intervals
+
+Now that we have determined there is a significant difference in points per game and efficiency rating for Hall of Fame players, it is appropriate to construct a confidence interval that should give us a good estimate of what a rookie's statistics must be in order to have a good chance of making the Hall of Fame. Using the same distribution for $X_p$ as above, we find the 95% confidence interval for a player's points per game to be:
+
+$$
+[12.427, 16.163]
+$$
+
+We are 95% confident a Hall of Fame rookie averaged between 12.427 and 16.163 points per game. This is a large difference between the confidence interval for non-Hall of Fame rookies of 6.275 to 6.689 points per game.
+
+We can repeat this calculation to determine an interval for the efficiency rating of a Hall of Fame rookie. Using the same distribution for $X_e$, we find the 95% confidence interval for a Hall of Fame rookies efficiency rating to be:
+
+$$
+[14.185, 18.315]
+$$
+
+We are 95% confident a Hall of Fame rookie had an efficiency rating between 14.185 and 18.315, which is much higher than the efficiency rating confidence interval for Non-Hall of Fame rookies which is 6.886 to 7.322.
+
+## Linear Regression Model
+
+Lastly, we will construct a linear regression model to predict a Hall of Fame player's points per game based on their height.
+We found our linear regression model of points per game based on height to take the following form:
+$$
+Predicted \ Points = -13.612 + 0.137(height)
+$$
+
+We can see how it fits with the Hall of Fame rookie data below:
+
+# Insert Graph
+
+However, we want to determine if there is a significant relationship between a Hall of Fame rookie's height and their average points per game. Since we found our slope coefficient is positive, we will construct a one-sided hypothesis test with the following hypotheses:
+
+$$
+H_0: \beta_1 = 0 \\
+H_a: \beta_1 > 0
+$$
+
+Where $\beta_1$ represents the expected change in points per game as height increases for Hall of Fame rookies. In this case,if we cannot reject that $\beta_1 = 0$, then we cannot conclude there is a significant positive relationship between points per game and the height of a Hall of Fame rookie and a linear model then may not be appropriate to use. 
+
+Running the hypothesis test, we find a t-statistic of $t = 1.619$ which has a corresponding p-value of 0.0566. Therefore, we have weak evidence to reject the null hypothesis and conclude there is a significant positive relationship between points per game and height for Hall of Fame rookies.
+
+## Discussion
+
+We started by observing differences in points per game and efficiency rating between Hall of Fame rookies and non-Hall of Fame rookies and Hall of Famers make up a very small portion of rookies from 1980 to 2016. We first examined the trends of points per game and efficiency rating for Hall of Fame players over time and checked the proper conditions to ensure a linear model was appropriate to use. We then conducted a hypothesis test to determine if there was a significant negative relationship between points per game and efficiency versus time. The p-value for the points per game test was 0.2415 and the p-value for the efficiency rating test was 0.3874, and both are greater than 0.05. Therefore, we fail to reject the null hypothesis and have no evidence there is a significant negative relationship between the year a player was drafted and points per game or the year a player was drafted and efficiency rating in their rookie year. However, we found the insignificant negative relationship could be due to a decrease in games played over time. Particularly for rookies, gaining experience and becoming comfortable in the NBA is very important. When you play more games, you have more opportunities to get acclimated to NBA-level play and can become comfortable in a faster time frame. This comfort can possibly lead to more points per game and efficiency rating, however, further analysis would need to be conducted in order to conclude the decrease in the variables is solely due to a decrease in games played.
+
+We then conducted a hypothesis test to determine if there was a true difference in the mean points per game for Hall of Fame rookies versus non-Hall of Fame rookies. We found a p-value of $7.816*10^{-11}$ = 0, so we reject the null hypothesis and have evidence Hall of Fame rookies score more points per game than non-Hall of Fame rookies. We conducted a similar hypothesis test to determine if there was a true difference in the mean efficiency rating for Hall of Fame rookies versus non-Hall of Fame rookies. We found a p-value of $1.673*10^{-11}$ = 0, so we reject the null hypothesis and have evidence Hall of Fame rookies have a higher efficiency rating than non-Hall of Fame rookies. Therefore, we have some evidence that points per game and efficiency rating can be good indicators of whether or not a player will get into the Hall of Fame, but more analysis is needed to officially conclude this.
+
+Now that we determined these were relatively good indicators of a player's chance to make the Hall of Fame, we analyzed to answer our main question regarding "What statistics must a player average in their rookie year to have a good chance of making the Hall of Fame?" We calculated the 95% confidence interval for a Hall of Fame player's points per game in their rookie year to be [12.427, 16.163]. Under repeated sampling, we are 95% confident a Hall of Fame player will average between 12.427 and 16.163 points per game in their rookie year. Additionally, we calculated the 95% confidence interval for a Hall of Fame player's efficiency rating in their rookie year to be [14.185, 18.315]. Under repeated sampling, we are 95% confident a Hall of Fame player will have an efficiency rating between 14.185 and 18.315 in their rookie year. Both of these confidence intervals contained statistics larger than non-Hall of Fame rookies, which again helps display that the statistics we utilized can possibly good indicators of getting into the Hall of Fame, but further analysis would need to be conducted to draw definite conclusions. 
+
+Finally, we thought it would be interesting to predict a Hall of Fame player's points per game in their rookie year when the only information we have is their height in centimeters. We used a least squares regression model relating to height and predicted points. We found a positive relationship between height and points per game for Hall of Fame players in their rookie year and our linear model equation was of the form $Predicted \ Points = -13.612 + 0.137(height)$. This means that for every 1 centimeter increase in height, a Hall of Fame rookie's points per game increase by 0.137 points. However, when conducting a one-sides hypothesis test on the slope of our model to determine if there was a significant relationship between points per game and height for Hall of Fame rookies, we found a p-value of 0.0566. Therefore, we only have weak evidence to reject the null hypothesis and weak evidence to conclude there is a significant positive relationship between points per game and height of Hall of Fame rookies. Given that we only found weak evidence, the result should be approached with caution and more data should be collected and analyzed before determining a definite conclusion. Additionally, the play-style in the NBA changes over time, where one period can favor tall players (forwards and centers) and others can favor shorter players (guards). Therefore, to get the most accurate conclusion, stratification by time period may be helpful.  
+
+However, there are some shortcomings to our analysis. First of all, a large factor that is taken into account for a player to get into the Hall of Fame is their team's success. The underlying meaning of this is that the player is good enough to help their team do well as a whole because after all, basketball is a team sport. Our analysis didn't take the success of the team a player was on into account since we didn't have the relevant data. Our data set of Hall of Fame players was also relatively small since it had 42 observations. This is still enough to assume an approximately normal distribution by the central limit theorem, however, more observations would lead to more accurate confidence intervals and regression models and we could be more confident in what our hypothesis tests found. 
+
+One interesting question to look at when conducting further analysis is to analyze if the record of the team a player is on in their rookie year has any influence on their Hall of Fame chances. This could be done by obtaining information about the teams of all the Hall of Fame players and non-Hall of Fame players and conducting analysis and inference tests as we did. We could use some other methods within our analysis such as a simulation to directly determine whether the distribution of points and efficiency rating was normally distributed. We also could have analyzed other measures such as points per minute to determine if that has any impact on Hall of Fame status. It would also be interesting to construct a model to predict how many points a player scores given their minutes played or games played.
+
+In conclusion, we found strong evidence there is a difference between Hall of Fame players' points per game and efficiency rating in their rookie year versus non-Hall of Fame players. We used this analysis to construct a confidence interval so we could predict whether a rookie will make the Hall of Fame given their points and efficiency rating. We also determined a potential model to predict a Hall of Fame rookies points per game given their height in centimeters. More generally, we found some evidence that a player's rookie year is a possible indicator of future Hall of Fame induction, but more analysis would need to be conducted to confidently conclude this more generalized question of interest.
