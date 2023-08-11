@@ -63,12 +63,12 @@ $$
 
 Therefore, I will construct a left-tail hypothesis test with the following hypotheses:
 
-$$
+```math
 H_0: \beta_1 = 0
-$$
-$$
+```
+```math
 H_a: \beta_1 < 0
-$$
+```
 
 Where $\beta_1$ represents the expected change in points per game as the year increases.
 
@@ -107,12 +107,12 @@ Let $X_p$ be the true mean points per game for a Hall of Fame rookie with distri
 Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
 
 Under these distributions, I have the following hypotheses:
-$$
+```math
 H_0: X_p-Y_p = 0
-$$
-$$
+```
+```math
 H_a: X_p-Y_p > 0
-$$
+```
 
 # Insert t-test output
 
@@ -125,12 +125,12 @@ Let $X_e$ be the true mean efficiency rating for a Hall of Fame rookie with dist
 Let $Y_e$ be the true mean efficiency rating for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
 
 Under these distributions, I have the following hypotheses:
-$$
+```math
 H_0: X_e-Y_e = 0
-$$
-$$
+```
+```math
 H_a: X_e-Y_e > 0
-$$
+```
 
 # Insert t-test output
 
@@ -168,12 +168,12 @@ I can see how it fits with the Hall of Fame rookie data below:
 
 However, I want to determine if there is a significant relationship between a Hall of Fame rookie's height and their average points per game. Since I found my slope coefficient is positive, I will construct a one-sided hypothesis test with the following hypotheses:
 
-$$
+```math
 H_0: \beta_1 = 0
-$$
-$$
+```
+```math
 H_a: \beta_1 > 0
-$$
+```
 
 Where $\beta_1$ represents the expected change in points per game as height increases for Hall of Fame rookies. In this case, if I cannot reject that $\beta_1 = 0$, then I cannot conclude there is a significant positive relationship between points per game and the height of a Hall of Fame rookie and a linear model then may not be appropriate to use. 
 
