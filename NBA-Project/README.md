@@ -64,7 +64,9 @@ $$
 Therefore, I will construct a left-tail hypothesis test with the following hypotheses:
 
 $$
-H_0: \beta_1 = 0 \\
+H_0: \beta_1 = 0
+$$
+$$
 H_a: \beta_1 < 0
 $$
 
@@ -106,7 +108,9 @@ Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with di
 
 Under these distributions, I have the following hypotheses:
 $$
-H_0: X_p-Y_p = 0 \\
+H_0: X_p-Y_p = 0
+$$
+$$
 H_a: X_p-Y_p > 0
 $$
 
@@ -122,7 +126,9 @@ Let $Y_e$ be the true mean efficiency rating for a non-Hall of Fame rookie with 
 
 Under these distributions, I have the following hypotheses:
 $$
-H_0: X_e-Y_e = 0 \\
+H_0: X_e-Y_e = 0
+$$
+$$
 H_a: X_e-Y_e > 0
 $$
 
@@ -163,7 +169,9 @@ I can see how it fits with the Hall of Fame rookie data below:
 However, I want to determine if there is a significant relationship between a Hall of Fame rookie's height and their average points per game. Since I found my slope coefficient is positive, I will construct a one-sided hypothesis test with the following hypotheses:
 
 $$
-H_0: \beta_1 = 0 \\
+H_0: \beta_1 = 0
+$$
+$$
 H_a: \beta_1 > 0
 $$
 
