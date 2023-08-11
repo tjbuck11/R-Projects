@@ -23,7 +23,7 @@ We will use points and efficiency because they are primary statistics associated
 | Variable  | Description |
 | ------------- | ------------- |
 | **Points**  | Player’s average number of points per game  |
-| **Efficiency**  | Holistic measure of the player’s success. Calculated as (Points + Rebounds + Assists + Steals + Blocks − Missed Field Goals − Missed Free Throws - Turnovers) / Games Played |
+| **Efficiency**  | Holistic measure of the player’s success ([Points + Rebounds + Assists + Steals + Blocks − Missed Field Goals − Missed Free Throws - Turnovers] / Games Played) |
 | **Height**  |  Height of the player in centimeters  |
 | **Weight**  |  Weight of a player in kilograms  |
 | **Hall of Fame** | Year the player was inducted to the Hall of Fame, NA if the player did not make the Hall of Fame |
