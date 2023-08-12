@@ -113,10 +113,13 @@ H_0: X_p-Y_p = 0
 ```math
 H_a: X_p-Y_p > 0
 ```
+Formulation and calculation of the t-statistic:
 
-# Insert t-test output
+```math
+t = \frac{(\bar{X}_p - \bar{Y}_p) - (X_p - Y_p)}{\sqrt{\frac{s_{hof}^2}{n_1} + \frac{s_n^2}{n_2}}} = \frac{(14.29524 - 6.481957) - 0}{\sqrt{\frac{5.993043^2}{42} + \frac{4.000983^2}{1441}}} = 8.3948
+```
 
-I calculate a t-statistic of 8.39. This value has a corresponding $p-val = 7.816*10^{-11}$ which is essentially 0.
+The t value is 8.39 with a corresponding $p-val = 7.816*10^{-11}$ which is essentially 0.
 
 Now I will conduct a similar test for the efficiency rating of a Hall of Fame rookie versus a non-Hall of Fame rookie. 
 
@@ -132,6 +135,10 @@ H_0: X_e-Y_e = 0
 H_a: X_e-Y_e > 0
 ```
 
+Formulation and calculation of the t-statistic:
+```math
+t = \frac{(\bar{X}_e - \bar{Y}_e) - (X_e - Y_e)}{\sqrt{\frac{s_{hof}^2}{n_1} + \frac{s_n^2}{n_2}}} = \frac{(16.250000 - 7.104025) - 0}{\sqrt{\frac{6.628072^2}{42} + \frac{4.221348^2}{1441}}} = 8.890
+```
 # Insert t-test output
 
 I calculate a t-statistic of 8.890, which has a corresponding $p-val = 1.673 *10^{-11}$ which is essentially 0.
