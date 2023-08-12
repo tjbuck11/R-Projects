@@ -104,7 +104,7 @@ I have two independent samples and I will treat the data as randomly sampled fro
 
 Let $X_p$ be the true mean points per game for a Hall of Fame rookie with distribution $t(df = 41)$
 
-Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
+Let $Y_p$ be the true mean points per game for a non-Hall of Fame rookie with distribution $t(df = 1440)$
 
 Under these distributions, I have the following hypotheses:
 ```math
