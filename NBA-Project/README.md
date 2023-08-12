@@ -122,11 +122,8 @@ t = \frac{(\bar{X}_p - \bar{Y}_p) - (X_p - Y_p)}{\sqrt{\frac{s_{hof}^2}{n_1} + \
 The t value is 8.39 with a corresponding $p-val = 7.816*10^{-11}$ which is essentially 0.
 
 Now I will conduct a similar test for the efficiency rating of a Hall of Fame rookie versus a non-Hall of Fame rookie. 
-
-Let $X_e$ be the true mean efficiency rating for a Hall of Fame rookie with distribution $t(df = 41)$\
-
-Let $Y_e$ be the true mean efficiency rating for a non-Hall of Fame rookie with distribution $t(df = 1440)$\
-
+Let $X_e$ be the true mean efficiency rating for a Hall of Fame rookie with distribution $t(df = 41)$
+Let $Y_e$ be the true mean efficiency rating for a non-Hall of Fame rookie with distribution $t(df = 1440)$
 Under these distributions, I have the following hypotheses:
 ```math
 H_0: X_e-Y_e = 0
