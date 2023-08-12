@@ -33,7 +33,7 @@ I will use points and efficiency because they are primary statistics associated 
 As stated before, I believe making the Hall of Fame is a very prestigious award that only a small fraction of NBA players achieve. I find that my data also represents this since only 2.83% of the rookies in my data set were eventually inducted into the Hall of Fame and 97.17% were never inducted. 
 Let's look at how these Hall of Fame players compare to non-Hall of Fame players in various aspects.
 
-!(https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/variable_summary.png)
+![variable summary](https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/variable_summary.png)
 
 The box plot on the left is a player's points per game in their rookie year grouped by Hall of Fame status and the box plot on the right is a player's efficiency rating grouped by Hall of Fame status. From these plots, I can see there are differences between Hall of Fame and non-Hall of Fame players, but are these differences significant? 
 
