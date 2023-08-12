@@ -1,6 +1,7 @@
 # Loan Default Prediction
 ### By Thomas Buck
 
+## Project Introduction
 The majority of individuals have previously taken out a loan and everyone intends on paying the loan back, but the payment does not always go as expected. When a borrower stops making the required payments, they go into what is known as “default”. Defaults are a frequent occurrence and banks incur losses on the outstanding loan amount that were never repaid. The current default rate for bank loans in the U.S. is approximately 1.21%, but rates have been as high as 7.4% during times of economic crisis, such as the Great Recession.2 These economic crises result in drastic losses for banks, and during the COVID-19 pandemic, the four biggest U.S. banks’ had a combined loss reserve of over $80 billion.4 Large monetary losses on loan defaults can affect a country’s economic growth and health. Therefore, large economic incentives are involved with accurately predicting whether a borrower will default since it helps banks plan for future losses. This project will utilize classification models to accurately predict a loan’s default status, which is either “Defaulted” or “Not Defaulted”.
 
 ## Loan Default Prediction Data and Cleaning
