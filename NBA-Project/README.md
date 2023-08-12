@@ -39,21 +39,21 @@ The box plot on the left is a player's points per game in their rookie year grou
 
 To answer this question, I want to first look at trends in the data that could impact my analysis. Specifically, I will examine how points per game and efficiency rating change over time for Hall of Fame players. If I find that there is a significant change in points per game and efficiency, I should take this into account for my further analysis.
 
-# Insert Line Plot
+![variable over time](https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/variable_over_time.png)
 
 Both of my linear regression models display a negative slope, implying a decrease in points per game and efficiency rating over time. Let's look at the games played variable to see if it can offer a possible explanation.
 
 ## Checking Trends in the Data
 
-# Insert Graph of Year vs games played
+![games played over time](https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/gp_graph.png)
 
-There appears to be a weak negative relationship between the year a player was drafted and their number of games played. It is possible this slight decrease in games played could partially explain the slight negative trends in points per game and efficiency rating over time, but much more analysis would need to be conducted to conclude this.
+There appears to be a weak negative relationship between the year a player was drafted and the number of games played. It is possible this slight decrease in games played could partially explain the slight negative trends in points per game and efficiency rating over time, but much more analysis would need to be conducted to conclude this.
 
-Before I conduct a hypothesis test on my linear regression models, I first want to ensure using a linear model is appropriate. I can do so by looking at the residuals associated with my linear models, which takes a given data point from my data and measures how far that value is from my predicted value.
+Before I conduct a hypothesis test on my linear regression models, I first want to ensure using a linear model is appropriate. I can do so by looking at the residuals associated with my linear models, which take a given data point from my data and measure how far that value is from my predicted value.
 
-# Insert Residual Plot
+![residual plot](https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/resid_dist_graph.png)
 
-The first row of graphics display scatter plots of the residuals for the points per game and efficiency rating variables, respectively, for Hall of Famer's. There is also a horizontal line at 0 to help visualize where each residual falls. There is no pattern between the residuals, which means my use of a linear model is appropriate. The second row displays the distribution of the residuals for points per game and efficiency rating respectively. The distribution of the residuals is the black line and the normal distribution with a similar mean and standard deviation is the blue line. They appear to follow the normal distribution pretty close, so I can assume the distribution of the residuals is approximately normal, which I will utilize to conduct a hypothesis test on the slopes of my linear models.
+The first row of graphics displays scatter plots of the residuals for the points per game and efficiency rating variables, respectively, for Hall of Famers. There is also a horizontal line at 0 to help visualize where each residual falls. There is no pattern between the residuals, which means my use of a linear model is appropriate. The second row displays the distribution of the residuals for points per game and efficiency rating respectively. The distribution of the residuals is the black line and the normal distribution with a similar mean and standard deviation is the blue line. They appear to follow the normal distribution pretty close, so I can assume the distribution of the residuals is approximately normal, which I will utilize to conduct a hypothesis test on the slopes of my linear models.
 
 Now I conduct a hypothesis test to determine if the relationship between the year a player was drafted and points per game and efficiency is significant. I know the Hall of Fame players sampling distribution of average points per game and average efficiency per game follows a t-distribution since I do not know the standard deviation of the entire population and my residuals follow an approximately normal distribution for these variables. However, because I am estimating for the slope and the intercept of my regression model, I am using up 2 degrees of freedom, so I now have v = n-2 degrees of freedom. Therefore, both my points per game and efficiency rating variables for Hall of Fame rookies have the following distribution:
 
@@ -71,9 +71,6 @@ H_a: \beta_1 < 0
 ```
 
 Where $\beta_1$ represents the expected change in points per game as the year increases.
-
-# Insert Summary table for the linear model (points)
-
 The estimated slope is $\hat{\beta}_1 = -0.1077$ with an estimated standard error of $SE(\hat{\beta}_1)=0.1521$.
 
 This leads to a t-statistic of 
@@ -84,8 +81,6 @@ t = \frac{-0.1077  - 0}{0.1521} = -0.708
 This t-statistic has a corresponding p-value of **0.2415**, which is greater than 0.05. Therefore, I fail to reject the null hypothesis.
 
 I can follow the same sampling distribution and hypotheses to test the relationship between the year a player was drafted and the efficiency rating. In this case, $\beta_1$ represents the expected change in efficiency rating as the year increases.
-
-# Insert Summary table of the linear model (efficiency)
 The estimated slope is $\hat{\beta}_1 = -0.04876$ with an estimated standard error of $SE(\hat{\beta}_1)=0.16908$.
 
 This leads to a t-statistic of 
@@ -171,7 +166,7 @@ $$
 
 I can see how it fits with the Hall of Fame rookie data below:
 
-# Insert Graph
+![height weight](https://github.com/tjbuck11/R-Projects/blob/main/NBA-Project/Visuals/height_vs_points.png)
 
 However, I want to determine if there is a significant relationship between a Hall of Fame rookie's height and their average points per game. Since I found my slope coefficient is positive, I will construct a one-sided hypothesis test with the following hypotheses:
 
