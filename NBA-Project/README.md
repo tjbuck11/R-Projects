@@ -151,7 +151,7 @@ $$
 [12.427, 16.163]
 $$
 
-Under repeated sampling, I am 95% confident a Hall of Fame rookie averaged between 12.427 and 16.163 points per game. This is a large difference between the confidence interval for non-Hall of Fame rookies of 6.275 to 6.689 points per game.
+Under repeated sampling, I am 95% confident a Hall of Fame rookie averaged between 12.427 and 16.163 points per game. This is a large difference between the confidence interval for non-Hall of Fame rookies of **6.275 to 6.689** points per game.
 
 I can repeat this calculation to determine an interval for the efficiency rating of a Hall of Fame rookie. Using the same distribution for $X_e$, I find the 95% confidence interval for a Hall of Fame rookies efficiency rating to be:
 
@@ -159,7 +159,7 @@ $$
 [14.185, 18.315]
 $$
 
-I am 95% confident a Hall of Fame rookie had an efficiency rating between 14.185 and 18.315, which is much higher than the efficiency rating confidence interval for Non-Hall of Fame rookies which is 6.886 to 7.322.
+I am 95% confident a Hall of Fame rookie had an efficiency rating between 14.185 and 18.315, which is much higher than the efficiency rating confidence interval for Non-Hall of Fame rookies which is **6.886 to 7.322**.
 
 ## Linear Regression Model
 
