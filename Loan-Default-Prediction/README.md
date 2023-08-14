@@ -54,15 +54,13 @@ A table with the name, type, and description of each variable from the loan data
 ## Appendix B
 ### Figure 1.2 
 Box Plots showing each categorical variable’s default percentage and default frequency per category. It appears the home status “Rent” and “Own” as well as grades F and G have slightly higher default rates than the average.
-| ![Box Plot 1](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_1.png) | 
-|-|-|
-| ![Box Plot 2](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_2.png) |
+![Box Plot 1](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_1.png)
+![Box Plot 2](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_2.png)
 
 ### Figure 1.3
 Some numerical predictors had few unique values, so boxplots were better for visualizations, and others had spread-out distributions, so summary statistic comparisons were used. The default rate appears to be larger for more than 4 delinquencies, more than 2 public records, and exactly 4 inquiries in the past 6 months. Additionally, all statistics for the collection amount are larger for defaulted loans, and all statistics for the recovery fees are smaller for defaulted loans. 
-| ![Box Plot 3](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_3.png) |
-|-|-|
-| ![odd variables](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/odd_var_graph.png) |
+![Box Plot 3](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_3.png)
+![odd variables](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/odd_var_graph.png)
 
 ### Figure 1.4
 A heat map showing the correlation between all numerical predictors and boxplots showing the distribution of numerical predictors by default status. There is essentially no multicollinearity or strong relationships between numerical predictors and limited variation in all predictors when comparing default statuses. However, borrowers of defaulted loans appear to have slightly higher homeownership values and weeks since the last payment, but a lower number of open accounts on average. 
@@ -72,9 +70,8 @@ A heat map showing the correlation between all numerical predictors and boxplots
 
 ### Figure 1.5
 These are bar plots showing the default rate for the top 10 titles and batches with the most defaults. The number on top of each bar corresponds to the total number of defaults which provides a frame of reference so the values with the highest default percentage are not always chosen since they may only correspond to a couple of loans.
-| ![Top 10 titles](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_titles.png) |
-|-|-|
-| ![Top 10 batches](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_batches.png) |
+![Top 10 titles](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_titles.png)
+![Top 10 batches](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_batches.png)
 
 ### Figure 1.6
 A table of the predictors being used for models besides logistic regression that includes the variable type and description.
