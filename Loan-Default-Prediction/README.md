@@ -45,10 +45,6 @@ When looking specifically at the data, it appears bank grades are limited in pre
 
 During my initial research, other loan default prediction projects I found displayed similar results to those I achieved. This could indicate the data itself is the root cause of the models misclassifying many loans since the analysis did not provide definitive clues as to how the loan default status should be predicted. Therefore, future analysis and model predictions on another dataset with similar attributes would help test this claim. Comprehensive data gathering may be the biggest challenge to creating an accurate loan default prediction model. However, overcoming this hurdle would revolutionize the banking industry and hopefully make large-scale loan default catastrophes a thing of the past.
 
-| ![Street View](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/street_view.png)| ![Map View 1](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/map_view_1.png)  |
-|-|-|
-| ![Map View 2](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/map_view_2.png) |
-
 ## Appendix A
 
 ### Figure 1.1
