@@ -45,38 +45,53 @@ When looking specifically at the data, it appears bank grades are limited in pre
 
 During my initial research, other loan default prediction projects I found displayed similar results to those I achieved. This could indicate the data itself is the root cause of the models misclassifying many loans since the analysis did not provide definitive clues as to how the loan default status should be predicted. Therefore, future analysis and model predictions on another dataset with similar attributes would help test this claim. Comprehensive data gathering may be the biggest challenge to creating an accurate loan default prediction model. However, overcoming this hurdle would revolutionize the banking industry and hopefully make large-scale loan default catastrophes a thing of the past.
 
+| ![Street View](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/street_view.png)| ![Map View 1](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/map_view_1.png)  |
+|-|-|
+| ![Map View 2](https://github.com/tjbuck11/NYC-Living-Optimization/blob/main/Images/map_view_2.png) |
+
 ## Appendix A
 
 ### Figure 1.1
 A table with the name, type, and description of each variable from the loan data.
-
+![variable table](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/variable_table.png)
 
 ## Appendix B
 ### Figure 1.2 
 Box Plots showing each categorical variable’s default percentage and default frequency per category. It appears the home status “Rent” and “Own” as well as grades F and G have slightly higher default rates than the average.
+| ![Box Plot 1](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_1.png) | 
+|-|-|
+| ![Box Plot 2](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_2.png) |
 
 ### Figure 1.3
 Some numerical predictors had few unique values, so boxplots were better for visualizations, and others had spread-out distributions, so summary statistic comparisons were used. The default rate appears to be larger for more than 4 delinquencies, more than 2 public records, and exactly 4 inquiries in the past 6 months. Additionally, all statistics for the collection amount are larger for defaulted loans, and all statistics for the recovery fees are smaller for defaulted loans. 
+| ![Box Plot 3](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/category_var_3.png) |
+|-|-|
+| ![odd variables](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/odd_var_graph.png) |
 
 ### Figure 1.4
 A heat map showing the correlation between all numerical predictors and boxplots showing the distribution of numerical predictors by default status. There is essentially no multicollinearity or strong relationships between numerical predictors and limited variation in all predictors when comparing default statuses. However, borrowers of defaulted loans appear to have slightly higher homeownership values and weeks since the last payment, but a lower number of open accounts on average. 
-
+| ![Heat Map](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/heatmap.png) | ![box plot 1](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/numerical_var_1.png) |
+|-|-|
+| ![box plot 2](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/numerical_var_2.png) | ![box plot 3](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/numerical_var_3.png) |
 
 ### Figure 1.5
 These are bar plots showing the default rate for the top 10 titles and batches with the most defaults. The number on top of each bar corresponds to the total number of defaults which provides a frame of reference so the values with the highest default percentage are not always chosen since they may only correspond to a couple of loans.
-
+| ![Top 10 titles](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_titles.png) |
+|-|-|
+| ![Top 10 batches](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/top_10_batches.png) |
 
 ### Figure 1.6
 A table of the predictors being used for models besides logistic regression that includes the variable type and description.
-
+![predictor variables](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/final_predictors.png)
 
 ## Appendix C
 ### Figure 1.7
 The output of LASSO regression where the optimal lambda was determined using cross-validation with the “glmnet” package.
-
+![LASSO output](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/LASSO_output.png)
 
 ### Figure 1.8
 The confusion matrix output for all models, with the predictions column an abbreviated version of the model as well as a table showing the sensitivity, specificity, false positive rate, false negative rate, and overall error rate for each model.
+![Model Summaries](https://github.com/tjbuck11/R-Projects/blob/main/Loan-Default-Prediction/Visuals/models_summary.png)
 
 
 
